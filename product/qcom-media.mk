@@ -16,6 +16,7 @@ PRODUCT_COPY_FILES += \
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=1 \
+    persist.media.treble_omx=false \
     vidc.enc.narrow.searchrange=1
 
 # Storage
