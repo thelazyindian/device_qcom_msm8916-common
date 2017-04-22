@@ -10,6 +10,8 @@ BOARD_RAMDISK_OFFSET     := 0x02000000
 ENABLE_CPUSETS := true
 
 TARGET_KERNEL_SOURCE := kernel/qcom/msm8916
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 ifneq ($(FORCE_32_BIT),true)
 TARGET_USES_UNCOMPRESSED_KERNEL := true
 endif
