@@ -1,3 +1,3 @@
 # Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_cm
+#PRODUCT_PACKAGES += \
+#    librecovery_updater_cm
