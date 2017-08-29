@@ -20,3 +20,7 @@ PRODUCT_PACKAGES += \
     libcnefeatureconfig \
     librmnetctl \
     libxml2
+
+# Telephony-ext
+PRODUCT_BOOT_JARS += telephony-ext
+PRODUCT_PACKAGES += telephony-ext
