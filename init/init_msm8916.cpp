@@ -34,19 +34,15 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
-#include "vendor_init.h"
+#include <android-base/properties.h>
+
 #include "property_service.h"
-#include "log.h"
-#include "util.h"
+#include "vendor_init.h"
 
 #include "init_msm8916.h"
 
-#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
-#include <sys/_system_properties.h>
-
-#include <android-base/properties.h>
 using android::base::GetProperty;
-using android::base::SetProperty;
+
 __attribute__ ((weak))
 void init_target_properties()
 {
@@ -98,9 +94,9 @@ static void init_alarm_boot_properties()
          * 8 -> KPDPWR_N pin toggled (power key pressed)
          */
         if (buf[0] == '3' || tmp == "true")
-            SetProperty("ro.alarm_boot", "true");
+            property_set("ro.alarm_boot", "true");
         else
-            SetProperty("ro.alarm_boot", "false");
+            property_set("ro.alarm_boot", "false");
     }
 }
 
